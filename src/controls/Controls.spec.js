@@ -20,3 +20,13 @@ test('open/close button disabled if locked', () =>{
     fireEvent.click(getByText(/Close Gate/i));
     expect(toggleClosedMock).toHaveBeenCalledTimes(0)
 })
+
+test('lock/unlock button disabled if open', () =>{
+    const closedMock = false;
+    const toggleLockedMock = jest.fn();
+    const { getByText } = render(
+        <Controls closed={closedMock} toggleLocked={toggleLockedMock} />
+    );
+    fireEvent.click(getByText(/Lock Gate/i));
+    expect(toggleLockedMock).toHaveBeenCalledTimes(0)
+})
