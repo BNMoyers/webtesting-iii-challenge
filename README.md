@@ -51,8 +51,8 @@ The expected/assumed behavior of the application is listed below.
 
 ### Gate
 
-- [x] defaults to `unlocked` and `open`
-- [x] cannot be closed or opened if it is locked
+- defaults to `unlocked` and `open`
+- cannot be closed or opened if it is locked
 
 ### Dashboard
 
